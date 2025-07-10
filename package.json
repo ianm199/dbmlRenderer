@@ -1,0 +1,64 @@
+{
+  "name": "db-diagram-element",
+  "version": "1.0.0",
+  "description": "Framework-agnostic custom element for interactive DBML database diagrams",
+  "main": "dist/db-diagram-element.umd.js",
+  "module": "dist/db-diagram-element.js",
+  "type": "module",
+  "files": [
+    "dist/",
+    "src/",
+    "public/mode-dbml.js",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/db-diagram-element.js",
+      "require": "./dist/db-diagram-element.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "database",
+    "dbml",
+    "diagram",
+    "visualization",
+    "custom-element",
+    "web-component",
+    "schema",
+    "database-design",
+    "erd"
+  ],
+  "author": "Ian McLaughlin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/db-diagram-element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/db-diagram-element/issues"
+  },
+  "homepage": "https://github.com/yourusername/db-diagram-element#readme",
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "peerDependencies": {
+    "ace-builds": "^1.4.14"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions", 
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 8.0.0"
+  }
+}

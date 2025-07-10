@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DB Diagram Custom Element - Built Version</title>
+  
+  <!-- Load ACE Editor -->
+  <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.14/src-noconflict/ace.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.14/src-noconflict/theme-dracula.js"></script>
+  <script src="./public/mode-dbml.js"></script>
+  
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px;
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗃️ DB Diagram Custom Element - Built Version</h1>
+  
+  <db-diagram-viewer 
+    height="500px"
+    dbml="Table users {
+  id int [pk]
+  username varchar [unique]
+  email varchar [unique]
+  created_at timestamp
+}
+
+Table posts {
+  id int [pk]
+  user_id int
+  title varchar [not null]
+  content text
+  published boolean [default: false]
+  created_at timestamp
+}
+
+Table comments {
+  id int [pk]
+  post_id int
+  user_id int
+  content text [not null]
+  created_at timestamp
+}
+
+Ref: posts.user_id > users.id
+Ref: comments.post_id > posts.id
+Ref: comments.user_id > users.id"></db-diagram-viewer>
+  
+  <!-- Load the BUILT custom element -->
+  <script type="module" src="./dist/db-diagram-element.js"></script>
+</body>
+</html>
