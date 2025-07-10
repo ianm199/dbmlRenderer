@@ -46,6 +46,7 @@
   },
   "homepage": "https://github.com/yourusername/db-diagram-element#readme",
   "devDependencies": {
+    "terser": "^5.43.1",
     "vite": "^6.0.0"
   },
   "peerDependencies": {
@@ -53,7 +54,7 @@
   },
   "browserslist": [
     "last 2 Chrome versions",
-    "last 2 Firefox versions", 
+    "last 2 Firefox versions",
     "last 2 Safari versions",
     "last 2 Edge versions"
   ],
